@@ -1,0 +1,15 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+create:
+   path: /api/create
+   controller: App\Controller\PostsController::addDocAction   
+user_create:
+    path:     /api/users/{identifiant}
+    controller: App\Controller\UserController::showAction
+    methods:    [POST,GET,PUT]
+    defaults:   { identifiant: null }
+car_create:
+    path:     /api/cars
+    controller: App\Controller\CarController::showCarAction
+    methods:    [POST,GET,PUT]
